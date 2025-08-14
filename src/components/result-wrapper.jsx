@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ResultWrapper() {
+export function ResultWrapper({ totalTip, total }) {
   return (
     <>
       <div className="result-wrapper">
@@ -11,7 +11,7 @@ export function ResultWrapper() {
               <p>/ person</p>
             </div>
             <h3>
-              $<span id="tip-amount">0</span>
+              $<span id="tip-amount">{totalTip}</span>
             </h3>
           </div>
           <div className="total-amount">
@@ -20,7 +20,7 @@ export function ResultWrapper() {
               <p>/ person</p>
             </div>
             <h3>
-              $<span id="total">0</span>
+              $<span id="total">{total}</span>
             </h3>
           </div>
         </div>

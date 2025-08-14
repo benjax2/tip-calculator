@@ -8,9 +8,9 @@ export default function TipButtons({ tip, setTip }) {
         <li key={btn} id={`percentage-${btn}`}>
           <button
             type="button"
-            className={`percentage-button ${btn === tip ? 'active' : ''}`}
+            className={`percentage-button ${btn === tip && 'active'}`}
             value={btn}
-            onClick={(e) => setTip(parseInt(e.target.value))}
+            onClick={(e) => setTip(parseFloat(e.target.value))}
           >
             {btn}%
           </button>
@@ -22,6 +22,7 @@ export default function TipButtons({ tip, setTip }) {
           placeholder="Custom"
           id="custom-percentage-button"
           className="percentage-button"
+          onChange={(e) => setTip(parseFloat(e.target.value))}
         />
       </li>
     </ul>

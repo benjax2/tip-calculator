@@ -13,7 +13,7 @@ export function DataWrapper({ bill, setBill, people, setPeople, tip, setTip }) {
             type="number"
             value={bill}
             min="0"
-            onChange={(e) => setBill(e.target.value)}
+            onChange={(e) => setBill(parseFloat(e.target.value))}
           />
         </label>
         <TipButtons tip={tip} setTip={setTip} />
@@ -25,7 +25,7 @@ export function DataWrapper({ bill, setBill, people, setPeople, tip, setTip }) {
             type="number"
             value={people}
             min="1"
-            onChange={(e) => setPeople(e.target.value)}
+            onChange={(e) => setPeople(parseInt(e.target.value))}
           />
         </label>
       </div>
